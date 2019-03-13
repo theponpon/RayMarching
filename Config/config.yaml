@@ -1,50 +1,57 @@
-screen-width: 1024  # In pixels
-screen-height: 1024 # In pixels
+#screen-width: 1024  # In pixels
+#screen-height: 1024 # In pixels
+screen-width: 512  # In pixels
+screen-height: 512 # In pixels
 camera: {X: 0.0, Y: 0.0, Z: -1.0}
 
 objects:
-  - type: Sphere
+  - type: Mesh
     properties:
-      center: {X: 0.0, Y: 0.0, Z: -0.75}
-      material: {specular: 0.7, diffuse: 0.5, ambient: 0.2, shininess: 10.0, color: {R: 1.0, G: 0.0, B: 0.0}}
-      radius: 0.5
-  - type: Sphere
-    properties:
-      center: {X: -1.0, Y: 0.0, Z: 1.0}
-      material: {specular: 0.7, diffuse: 0.5, ambient: 0.2, shininess: 2.0, color: {R: 0.0, G: 1.0, B: 0.0}}
-      radius: 0.3
-  - type: Box
-    properties:
-      center: {X: 0.45, Y: 0.0, Z: 0.75}
-      width: 0.6
-      height: 0.5
-      breadth: 0.25
-      material: {specular: 0.9, diffuse: 0.7, ambient: 0.25, shininess: 2.0, color: {R: 1.0, G: 1.0, B: 0.0}}
-  - type: Plane
-    properties:
-      normal: {X: 0.0, Y: 0.0, Z: -1.0}
-      offset: 10.0
-      material: {specular: 0.9, diffuse: 0.7, ambient: 0.25, shininess: 2.0, color: {R: 0.0, G: 1.0, B: 1.0}}
-  - type: Plane
-    properties:
-      normal: {X: 0.0, Y: 1.0, Z: 0.0}
-      offset: 6.0
-      material: {specular: 0.9, diffuse: 0.7, ambient: 0.25, shininess: 2.0, color: {R: 0.0, G: 1.0, B: 1.0}}
-  - type: Plane
-    properties:
-      normal: {X: 0.0, Y: -1.0, Z: 0.0}
-      offset: 6.0
-      material: {specular: 0.9, diffuse: 0.7, ambient: 0.25, shininess: 2.0, color: {R: 0.0, G: 1.0, B: 1.0}}
-  - type: Plane
-    properties:
-      normal: {X: 1.0, Y: 0.0, Z: 0.0}
-      offset: 6.0
-      material: {specular: 0.9, diffuse: 0.7, ambient: 0.25, shininess: 2.0, color: {R: 0.0, G: 1.0, B: 1.0}}
-  - type: Plane
-    properties:
-      normal: {X: -1.0, Y: 0.0, Z: 0.0}
-      offset: 6.0
-      material: {specular: 0.9, diffuse: 0.7, ambient: 0.25, shininess: 2.0, color: {R: 0.0, G: 1.0, B: 1.0}}
+      path: "/mnt/DeepDrive/Data/ModelNet40/chair/train/chair_0036.off"
+      center: {X: 0.0, Y: 0.0, Z: 0.5}
+      material: {specular: 0.7, diffuse: 0.5, ambient: 0.2, shininess: 10.0, color: {R: 0.75, G: 0.75, B: 0.75}}
+#  - type: Sphere
+#    properties:
+#      center: {X: 0.0, Y: 0.0, Z: -0.75}
+#      material: {specular: 0.7, diffuse: 0.5, ambient: 0.2, shininess: 10.0, color: {R: 1.0, G: 0.0, B: 0.0}}
+#      radius: 0.5
+#  - type: Sphere
+#    properties:
+#      center: {X: -1.0, Y: 0.0, Z: 1.0}
+#      material: {specular: 0.7, diffuse: 0.5, ambient: 0.2, shininess: 2.0, color: {R: 0.0, G: 1.0, B: 0.0}}
+#      radius: 0.3
+#  - type: Box
+#    properties:
+#      center: {X: 0.45, Y: 0.0, Z: 0.75}
+#      width: 0.6
+#      height: 0.5
+#      breadth: 0.25
+#      material: {specular: 0.9, diffuse: 0.7, ambient: 0.25, shininess: 2.0, color: {R: 1.0, G: 1.0, B: 0.0}}
+#  - type: Plane
+#    properties:
+#      normal: {X: 0.0, Y: 0.0, Z: -1.0}
+#      offset: 10.0
+#      material: {specular: 0.9, diffuse: 0.7, ambient: 0.25, shininess: 2.0, color: {R: 0.0, G: 1.0, B: 1.0}}
+#  - type: Plane
+#    properties:
+#      normal: {X: 0.0, Y: 1.0, Z: 0.0}
+#      offset: 6.0
+#      material: {specular: 0.9, diffuse: 0.7, ambient: 0.25, shininess: 2.0, color: {R: 0.0, G: 1.0, B: 1.0}}
+#  - type: Plane
+#    properties:
+#      normal: {X: 0.0, Y: -1.0, Z: 0.0}
+#      offset: 6.0
+#      material: {specular: 0.9, diffuse: 0.7, ambient: 0.25, shininess: 2.0, color: {R: 0.0, G: 1.0, B: 1.0}}
+#  - type: Plane
+#    properties:
+#      normal: {X: 1.0, Y: 0.0, Z: 0.0}
+#      offset: 6.0
+#      material: {specular: 0.9, diffuse: 0.7, ambient: 0.25, shininess: 2.0, color: {R: 0.0, G: 1.0, B: 1.0}}
+#  - type: Plane
+#    properties:
+#      normal: {X: -1.0, Y: 0.0, Z: 0.0}
+#      offset: 6.0
+#      material: {specular: 0.9, diffuse: 0.7, ambient: 0.25, shininess: 2.0, color: {R: 0.0, G: 1.0, B: 1.0}}
 
 
 lights:
@@ -57,21 +64,21 @@ lights:
       intensity: 0.8
       color: {R: 1.0, G: 1.0, B: 1.0}
       attenuation: 1.1
-  #- type: DirectionalLight
-  #  properties:
-  #    pos: {X: 6.0, Y: 0.0, Z: 3.0}
-  #    light_dir: {X: -2.0, Y: 0.0, Z: -1.0}
-  #    ambient: 0.2
-  #    diffuse: 0.8
-  #    specular: 1.0
-  #    intensity: 0.2
-  #    color: {R: 1.0, G: 1.0, B: 1.0}
-  #- type: DirectionalLight
-  #  properties:
-  #    pos: {X: -6.0, Y: 0.0, Z: 3.0}
-  #    light_dir: {X: 2.0, Y: 0.0, Z: -1.0}
-  #    ambient: 0.2
-  #    diffuse: 0.8
-  #    specular: 0.4
-  #    intensity: 0.1
-  #    color: {R: 1.0, G: 1.0, B: 1.0}
+  - type: DirectionalLight
+    properties:
+      pos: {X: 6.0, Y: 0.0, Z: 3.0}
+      light_dir: {X: -2.0, Y: 0.0, Z: -1.0}
+      ambient: 0.2
+      diffuse: 0.8
+      specular: 1.0
+      intensity: 0.2
+      color: {R: 1.0, G: 1.0, B: 1.0}
+  - type: DirectionalLight
+    properties:
+      pos: {X: -6.0, Y: 0.0, Z: 3.0}
+      light_dir: {X: 2.0, Y: 0.0, Z: -1.0}
+      ambient: 0.2
+      diffuse: 0.8
+      specular: 0.4
+      intensity: 0.1
+      color: {R: 1.0, G: 1.0, B: 1.0}

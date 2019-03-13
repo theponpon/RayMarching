@@ -8,6 +8,7 @@
 #include "Geometry/Box.h"
 #include "Geometry/Menger.h"
 #include "Geometry/Plane.h"
+#include "Geometry/Mesh.h"
 #include "Lighting/DirectionalLight.h"
 #include "Lighting/PointLight.h"
 
@@ -78,6 +79,13 @@ void ConfigManager::load_file(const std::string &file_src) {
             m_objects.push_back(std::make_shared<Menger>(properties["center"].as<Vec3f>(),
                                                       properties["material"].as<Material>(),
                                                       properties["iterations"].as<size_t>()));
+        }
+        else if (objects[i]["type"].as<std::string>() == "Mesh") {
+            auto properties = objects[i]["properties"];
+
+            m_objects.push_back(std::make_shared<Mesh>(properties["path"].as<std::string>(),
+                                                        properties["center"].as<Vec3f>(),
+                                                        properties["material"].as<Material>()));
         }
         else {
             throw std::runtime_error("config file syntax error: no such object type as " + objects[i]["type"].as<std::string>());
