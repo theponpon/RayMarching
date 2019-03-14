@@ -10,8 +10,8 @@ void Mesh::sdf(IN const Vec3f& position, OUT Intersection& output_intersection) 
     Eigen::MatrixXd N,C;
     Eigen::MatrixXd V_ray(1, 3), S_ray;
 
-    Vec3f sample_point = position + m_center;
-    V_ray.row(0) << sample_point.x(), sample_point.y(), sample_point.z();
+    Eigen::Vector3d centeredPos = _orientation * (Eigen::Vector3d(position.x(), position.y(), position.z()) - m_center);
+    V_ray.row(0) = centeredPos;
 
     signed_distance_pseudonormal(V_ray, _V, _F, _tree, _FN, _VN, _EN, _EMAP, S_ray, I, C, N);
 

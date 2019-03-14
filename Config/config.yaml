@@ -7,9 +7,10 @@ camera: {X: 0.0, Y: 0.0, Z: -1.0}
 objects:
   - type: Mesh
     properties:
-      path: "/mnt/DeepDrive/Data/ModelNet40/chair/train/chair_0036.off"
-      center: {X: 0.0, Y: 0.0, Z: 0.5}
-      material: {specular: 0.7, diffuse: 0.5, ambient: 0.2, shininess: 10.0, color: {R: 0.75, G: 0.75, B: 0.75}}
+      path: "/mnt/DeepDrive/Data/ModelNet40/chair/train/chair_0879.off"
+      center: {X: 0.0, Y: 0.0, Z: -0.5}
+      orientation: {X: 0.0, Y: 1.0, Z: 1.0}
+      material: {specular: 0.1, diffuse: 0.5, ambient: 0.2, shininess: 10.0, color: {R: 0.75, G: 0.75, B: 0.75}}
 #  - type: Sphere
 #    properties:
 #      center: {X: 0.0, Y: 0.0, Z: -0.75}
@@ -55,24 +56,24 @@ objects:
 
 
 lights:
-  - type: PointLight
-    properties:
-      pos: {X: 0.0, Y: 0.0, Z: 0.0}
-      ambient: 0.2
-      diffuse: 0.8
-      specular: 1.0
-      intensity: 0.8
-      color: {R: 1.0, G: 1.0, B: 1.0}
-      attenuation: 1.1
-  - type: DirectionalLight
-    properties:
-      pos: {X: 6.0, Y: 0.0, Z: 3.0}
-      light_dir: {X: -2.0, Y: 0.0, Z: -1.0}
-      ambient: 0.2
-      diffuse: 0.8
-      specular: 1.0
-      intensity: 0.2
-      color: {R: 1.0, G: 1.0, B: 1.0}
+#  - type: PointLight
+#    properties:
+#      pos: {X: 0.0, Y: 0.0, Z: 0.0}
+#      ambient: 0.2
+#      diffuse: 0.8
+#      specular: 1.0
+#      intensity: 0.8
+#      color: {R: 1.0, G: 1.0, B: 1.0}
+#      attenuation: 1.1
+#  - type: DirectionalLight
+#    properties:
+#      pos: {X: 6.0, Y: 0.0, Z: 3.0}
+#      light_dir: {X: -2.0, Y: 0.0, Z: -1.0}
+#      ambient: 0.2
+#      diffuse: 0.8
+#      specular: 1.0
+#      intensity: 0.2
+#      color: {R: 1.0, G: 1.0, B: 1.0}
   - type: DirectionalLight
     properties:
       pos: {X: -6.0, Y: 0.0, Z: 3.0}

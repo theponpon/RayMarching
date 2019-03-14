@@ -85,6 +85,7 @@ void ConfigManager::load_file(const std::string &file_src) {
 
             m_objects.push_back(std::make_shared<Mesh>(properties["path"].as<std::string>(),
                                                         properties["center"].as<Vec3f>(),
+                                                        properties["orientation"].as<Vec3f>(),
                                                         properties["material"].as<Material>()));
         }
         else {
