@@ -4,6 +4,8 @@
 
 #include "Mesh.h"
 
+#include <torch/torch.h>
+
 void Mesh::sdf(IN const Vec3f& position, OUT Intersection& output_intersection) const {
 
     Eigen::VectorXi I;
@@ -19,6 +21,8 @@ void Mesh::sdf(IN const Vec3f& position, OUT Intersection& output_intersection) 
 //    igl::signed_distance(V_ray, _V, _F,sign_type, S_ray,I,C,N);
 
     output_intersection = Intersection(S_ray(0), surface_material(), position);
+
+    torch::Tensor tensor = torch::eye(3);
 
     return;
 }
